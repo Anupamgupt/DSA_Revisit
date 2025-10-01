@@ -40,7 +40,36 @@ void solve(){
     
     vector<vector<int>>v;
     v={{0,1,2,0},{3,4,5,2},{1,3,1,5}};
-    
+    map<int,int>row;
+    map<int,int>column;
+    for(int i=0;i<v.size();i++){
+        for(int j=0;j<v[0].size();j++){
+            if(v[i][j]==0){
+                row[i]=1;
+                column[j]=1;
+            }
+        }
+    }
+   
+    for(auto it:row){
+       
+        for(int j =0;j<v[0].size();j++){
+            v[it.first][j]=0;
+        }
+    };
+    for(auto it:column){
+        for(int j =0;j<v.size();j++){
+            v[j][it.first]=0;
+        }
+    }
+   
+     for(int i=0;i<v.size();i++){
+        for(int j=0;j<v[0].size();j++){
+            cout<<v[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
     
  
     
