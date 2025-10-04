@@ -1,0 +1,1 @@
+{"name":"Local: Maximum Subarray","url":"e:\\DSA\\Arrays\\Maximum Subarray.cpp","tests":[{"id":1759598340292,"input":"9\n-2 1 -3 4 -1 2 1 -5 4 ","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\DSA\\Arrays\\Maximum Subarray.cpp","group":"local","local":true}
