@@ -1,0 +1,1 @@
+{"name":"Local: Rotate Image","url":"e:\\DSA\\Arrays 2\\Rotate Image.cpp","tests":[{"id":1759770474865,"input":"6\n1 2 3 4 5 6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\DSA\\Arrays 2\\Rotate Image.cpp","group":"local","local":true}

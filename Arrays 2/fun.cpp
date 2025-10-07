@@ -37,24 +37,23 @@ string to_upper(string s){
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 void solve(){
-   int n;
-   cin>>n;
-   vector<int>v(n);
-   for(int i=0;i<n;i++){
-    cin>>v[i];
-   }
-   int i=0,j=n-1;
-   while(i<=j){
-    int temp= v[i];
-    v[i]=v[j];
-    v[j]=temp;
-    j--;
-    i++;
-   }
-   for(int i=0;i<n;i++){
-    cout<<v[i]<<" ";
-   }
- 
+
+    int n;
+    cin>>n;
+    vector<int>v(n);
+    int s=0;
+    int s2=0;
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+        s+=v[i];
+        s2+=(i+1);
+    }
+    int diff=s2-s;
+    cout<<diff<<endl;
+    // int repeated=n-(s2-s);
+    // cout<<repeated<<endl;
+    // int missing =diff+repeated;
+    // cout<<missing<<endl;
     
 }
 
