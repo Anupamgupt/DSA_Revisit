@@ -37,23 +37,33 @@ string to_upper(string s){
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 void solve(){
-    vector<int> nums1;
-    int m;
-    vector<int>nums2;
-    int n;
-    for(int i=m;i<(m+n);i++){
-        nums1[i]=nums2[i-m];
+    vector<int>num1,num2;
+    int n,m;
+    for(int i=0;i<(m+n);i++){
+        cin>>num1[i];
+    }    
+    for(int i=0;i<n;i++){
+        cin>>num2[i];
+    }  
+    int i=m-1;
+    int j=n-1;
+    int k=m+n-1;  
+    while(j>=0){
+        if(i>=0 && num1[i]>num2[j]){
+            num1[k]=num1[i];
+            i--;
+            k--;
+        }else{
+            num1[k--]=num2[j--];
+        }
     }
-    sort(nums1.begin(),nums1.end());
- 
-    
 }
 
 int main(){ 
     fast;
     ll t;
-    cin>>t;
- //   t=1;
+    // cin>>t;
+    t=1;
     while(t--){
         solve();
     }
