@@ -60,7 +60,6 @@ void solve()
             mp[nums[i]] = 1;
         }
     }
-    return 0;
 }
 
 int main()
