@@ -47,6 +47,26 @@ int majorityElement(vector<int>& nums) {
         return 0;
 }
 void solve(){
+    int n;
+    cin>>n;
+
+    vector<int>v(n);
+    int flag=0;
+    int ans;
+    for(int i=0;i<n;i++){
+       cin>>v[i];
+       if(flag==0){
+        flag++;
+        ans=v[i];
+       }else{
+        if(ans==v[i]){
+            flag++;
+        }else{
+            flag--;
+        }
+       }
+    }
+    cout<<ans<<endl;
 
  
     
@@ -55,8 +75,8 @@ void solve(){
 int main(){ 
     fast;
     ll t;
-    cin>>t;
- //   t=1;
+    // cin>>t;
+   t=1;
     while(t--){
         solve();
     }
