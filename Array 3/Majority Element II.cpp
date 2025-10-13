@@ -53,8 +53,46 @@ vector<int> majorityElement(vector<int>& nums) {
         return ans;
 }
 void solve(){
+    int n;
+    cin>>n;
+    vector<int>v(n);
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+    }
+    int cnt1=0,cnt2=0, el1=INT_MIN, el2=INT_MIN;
+    for(int it : v){
+        if(cnt1==0 && el2!=it){
+            cnt1=1;
+            el1=it;
+        }else if(cnt2==0 && el1!=it){
+            cnt2=1;
+            el2=it;
+        }else if (el1==it){
+            cnt1++;
+        }else if(el2==it){
+            cnt2++;
+        }else{
+            cnt2--,cnt1--;
+        }
+    }
+    cnt2=0,cnt1=0;
+    for(int it:v){
+        if(el1==it)cnt1++;
+        else if(el2==it)cnt2++;
+    }
+    int k=n/3;
+    vector<int>ans;
+    if(cnt1>k){
+        ans.push_back(el1);
+    }
+    if(cnt2>k){
+        ans.push_back(el2);
 
- 
+    }
+    for(int it : ans){
+        cout<<it <<" ";
+    }
+
     
 }
 
