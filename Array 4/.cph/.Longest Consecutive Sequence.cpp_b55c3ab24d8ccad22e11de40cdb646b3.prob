@@ -1,0 +1,1 @@
+{"name":"Local: Longest Consecutive Sequence","url":"e:\\DSA\\Array 4\\Longest Consecutive Sequence.cpp","tests":[{"id":1760632273338,"input":"21\n4 0 -4 -2 2 5 2 0 -8 -8 -8 -8 -1 7 4 5 5 -4 6 6 -3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\DSA\\Array 4\\Longest Consecutive Sequence.cpp","group":"local","local":true}
