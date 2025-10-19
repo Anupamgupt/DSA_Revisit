@@ -36,26 +36,30 @@ string to_upper(string s){
      return s;
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
+  int maxAbsoluteSum(vector<int>& nums) {
+        int n=nums.size();
+        int mx=INT_MIN;
+        int mn=INT_MAX;
+        int sum=0;
+        int sum2=0;
+        for(int i=0;i<n;i++){
+           sum+=nums[i];
+           sum2+=nums[i];
+           if(sum<0){
+            sum=0;
+           }
+           if(sum2>0){
+            sum2=0;
+           }
+           mx=max(sum,mx);
+           mn=min(sum2,mn);
+        }
+        return max(mx,abs(mn));
+
+    }
 void solve(){
 
-    int n;
-    cin>>n;
-    vector<int>v(n);
-    int k=0;
-    for(int i=0;i<n;i++){
-        cin>>v[i];
-        k=k^v[i];
-       
-    }
-    for(int i=0;i<n;i++){
-        k=k^(i+1);
-    }
-    cout<<k<<endl;
-    
-    // int repeated=n-(s2-s);
-    // cout<<repeated<<endl;
-    // int missing =diff+repeated;
-    // cout<<missing<<endl;
+   cout<<abs(-1)<<endl;
     
 }
 
